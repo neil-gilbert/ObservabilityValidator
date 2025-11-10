@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GQE0RJI/+hE=",
+  "success": true,
+  "projectFilePath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj",
+  "expectedPackageFiles": [
+    "/Users/neilgilbert/.nuget/packages/yamldotnet/15.3.0/yamldotnet.15.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

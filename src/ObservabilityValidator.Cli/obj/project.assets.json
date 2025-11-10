@@ -1,0 +1,159 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "YamlDotNet/15.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ObservabilityValidator.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "YamlDotNet": "15.3.0"
+        },
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Core.dll": {}
+        }
+      },
+      "ObservabilityValidator.Providers.Datadog/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ObservabilityValidator.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Providers.Datadog.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Providers.Datadog.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "YamlDotNet/15.3.0": {
+      "sha512": "F93japYa9YrJ59AZGhgdaUGHN7ITJ55FBBg/D/8C0BDgahv/rQD6MOSwHxOJJpon1kYyslVbeBrQ2wcJhox01w==",
+      "type": "package",
+      "path": "yamldotnet/15.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "images/yamldotnet.png",
+        "lib/net47/YamlDotNet.dll",
+        "lib/net47/YamlDotNet.xml",
+        "lib/net6.0/YamlDotNet.dll",
+        "lib/net6.0/YamlDotNet.xml",
+        "lib/net7.0/YamlDotNet.dll",
+        "lib/net7.0/YamlDotNet.xml",
+        "lib/net8.0/YamlDotNet.dll",
+        "lib/net8.0/YamlDotNet.xml",
+        "lib/netstandard2.0/YamlDotNet.dll",
+        "lib/netstandard2.0/YamlDotNet.xml",
+        "lib/netstandard2.1/YamlDotNet.dll",
+        "lib/netstandard2.1/YamlDotNet.xml",
+        "yamldotnet.15.3.0.nupkg.sha512",
+        "yamldotnet.nuspec"
+      ]
+    },
+    "ObservabilityValidator.Core/1.0.0": {
+      "type": "project",
+      "path": "../ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
+      "msbuildProject": "../ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
+    },
+    "ObservabilityValidator.Providers.Datadog/1.0.0": {
+      "type": "project",
+      "path": "../ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj",
+      "msbuildProject": "../ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "ObservabilityValidator.Core >= 1.0.0",
+      "ObservabilityValidator.Providers.Datadog >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/neilgilbert/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Cli/ObservabilityValidator.Cli.csproj",
+      "projectName": "ObservabilityValidator.Cli",
+      "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Cli/ObservabilityValidator.Cli.csproj",
+      "packagesPath": "/Users/neilgilbert/.nuget/packages/",
+      "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Cli/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/neilgilbert/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj": {
+              "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
+            },
+            "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj": {
+              "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
