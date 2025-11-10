@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ObservabilityValidator.Core\ObservabilityValidator.Core.csproj" />
     <ProjectReference Include="..\ObservabilityValidator.Providers.Datadog\ObservabilityValidator.Providers.Datadog.csproj" />
+    <ProjectReference Include="..\ObservabilityValidator.Providers.Honeycomb\ObservabilityValidator.Providers.Honeycomb.csproj" />
   </ItemGroup>
 
 </Project>

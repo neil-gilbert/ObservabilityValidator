@@ -2,6 +2,7 @@
 using ObservabilityValidator.Core.Providers;
 using ObservabilityValidator.Core.Validation;
 using ObservabilityValidator.Providers.Datadog;
+using ObservabilityValidator.Providers.Honeycomb;
 
 namespace ObservabilityValidator.Cli;
 
@@ -46,6 +47,22 @@ public static class Program
                                ?? throw new InvalidOperationException($"Missing env var '{appKeyEnv}'.");
 
                     providers.Add(new DatadogProvider(p.Name, apiUrl, apiKey, appKey));
+                    break;
+
+                case "honeycomb":
+                    var hcUrl = p.Settings.TryGetValue("api_url", out var hcApi)
+                        ? hcApi
+                        : "https://api.eu1.honeycomb.io";
+
+                    var hcApiKeyEnv = p.Settings.GetValueOrDefault("api_key_env", "HONEYCOMB_API_KEY");
+                    var dataset = p.Settings.TryGetValue("dataset", out var ds) && !string.IsNullOrWhiteSpace(ds)
+                        ? ds
+                        : throw new InvalidOperationException("Honeycomb provider requires 'dataset' setting.");
+
+                    var hcApiKey = Environment.GetEnvironmentVariable(hcApiKeyEnv)
+                                   ?? throw new InvalidOperationException($"Missing env var '{hcApiKeyEnv}'.");
+
+                    providers.Add(new HoneycombProvider(p.Name, hcUrl, hcApiKey, dataset));
                     break;
 
                 default:

@@ -87,6 +87,14 @@ providers:
     enabled: false
     settings:
       endpoint: "http://localhost:4318"
+  
+  - name: honeycomb-eu-prod
+    type: Honeycomb
+    enabled: false
+    settings:
+      api_url: "https://api.eu1.honeycomb.io"
+      api_key_env: "HONEYCOMB_API_KEY"
+      dataset: "traces"
 ```
 
 ## Quick start
@@ -104,6 +112,9 @@ dotnet build
 ```bash
 export DD_API_KEY=your_datadog_api_key
 export DD_APP_KEY=your_datadog_app_key
+
+# For Honeycomb (EU)
+export HONEYCOMB_API_KEY=your_honeycomb_api_key
 ```
 
 ### 3. Run the validator

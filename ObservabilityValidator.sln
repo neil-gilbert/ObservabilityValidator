@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservabilityValidator.Core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservabilityValidator.Providers.Datadog", "src\ObservabilityValidator.Providers.Datadog\ObservabilityValidator.Providers.Datadog.csproj", "{5CABCEEF-4758-4338-BC2D-609AB85F1264}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservabilityValidator.Providers.Honeycomb", "src\ObservabilityValidator.Providers.Honeycomb\ObservabilityValidator.Providers.Honeycomb.csproj", "{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservabilityValidator.Core.Tests", "tests\ObservabilityValidator.Core.Tests\ObservabilityValidator.Core.Tests.csproj", "{97B00745-0AAB-4C46-B4E8-795275D97D0E}"
 EndProject
 Global
@@ -59,6 +61,18 @@ Global
 		{5CABCEEF-4758-4338-BC2D-609AB85F1264}.Release|x64.Build.0 = Release|Any CPU
 		{5CABCEEF-4758-4338-BC2D-609AB85F1264}.Release|x86.ActiveCfg = Release|Any CPU
 		{5CABCEEF-4758-4338-BC2D-609AB85F1264}.Release|x86.Build.0 = Release|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Debug|x64.Build.0 = Debug|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Debug|x86.Build.0 = Debug|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Release|x64.ActiveCfg = Release|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Release|x64.Build.0 = Release|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Release|x86.ActiveCfg = Release|Any CPU
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E}.Release|x86.Build.0 = Release|Any CPU
 		{97B00745-0AAB-4C46-B4E8-795275D97D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97B00745-0AAB-4C46-B4E8-795275D97D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97B00745-0AAB-4C46-B4E8-795275D97D0E}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -79,6 +93,7 @@ Global
 		{A7219379-325D-40E6-B430-B13F86E94194} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{789762BF-5620-4F9F-9996-83609F63BABB} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{5CABCEEF-4758-4338-BC2D-609AB85F1264} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{5FAFF5B2-21DA-4D31-9C8E-7D23386C8A8E} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{97B00745-0AAB-4C46-B4E8-795275D97D0E} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
