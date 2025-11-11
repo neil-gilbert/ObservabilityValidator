@@ -1,8 +1,8 @@
-# 🧭 ObservabilityValidator
+# 🧭 Casablanca
 
 **Declarative “observability contracts” for production systems**
 
-ObservabilityValidator lets you codify expectations about your system’s telemetry — for example:  
+Casablanca lets you codify expectations about your system’s telemetry — for example:  
 > “Every successful payment emits a span with `payment.status=success` and completes within 3 s.”
 
 It then validates those expectations against your observability backend (Datadog, OpenTelemetry Collector, etc.) automatically.
@@ -24,7 +24,7 @@ Common issues include:
 - Latency metrics not recorded correctly  
 - Attribute values inconsistent between services  
 
-ObservabilityValidator closes that gap by defining **contracts as code** and running them automatically in CI/CD or as a nightly validation job.
+Casablanca closes that gap by defining **contracts as code** and running them automatically in CI/CD or as a nightly validation job.
 
 ---
 
@@ -99,12 +99,26 @@ providers:
 
 ## Quick start
 
+### Install via NuGet (shift-left)
+
+- Libraries for apps/tests:
+  - `dotnet add package Casablanca.Engine`
+  - `dotnet add package Casablanca.Abstractions`
+  - `dotnet add package Casablanca.Testing`
+  - Optional providers (choose as needed):
+    - `dotnet add package Casablanca.Providers.Honeycomb`
+    - `dotnet add package Casablanca.Providers.Datadog`
+
+- CLI as a dotnet tool:
+  - `dotnet tool install -g Casablanca.Cli`
+  - Run: `ov --contracts <path> --config <path>`
+
 ### 1. Clone & build
 
 ```bash
-git clone https://github.com/neil-gilbert/ObservabilityValidator.git
-cd ObservabilityValidator
-dotnet build
+git clone https://github.com/neil-gilbert/Casablanca.git
+cd Casablanca
+dotnet build Casablanca.sln
 ```
 
 ### 2. Set environment variables
@@ -120,7 +134,7 @@ export HONEYCOMB_API_KEY=your_honeycomb_api_key
 ### 3. Run the validator
 
 ```bash
-dotnet run --project src/ObservabilityValidator.Cli \
+dotnet run --project src/Casablanca.Cli \
   -- --contracts=contracts/observability-contracts.yaml \
      --config=contracts/telemetry-config.yaml
 ```
@@ -137,7 +151,7 @@ dotnet run --project src/ObservabilityValidator.Cli \
 
 ## CI integration
 
-ObservabilityValidator exits non-zero if any contract fails — perfect for CI/CD pipelines.
+Casablanca exits non-zero if any contract fails — perfect for CI/CD pipelines.
 
 Example GitHub Action:
 
@@ -162,7 +176,7 @@ jobs:
           DD_API_KEY: ${{ secrets.DD_API_KEY }}
           DD_APP_KEY: ${{ secrets.DD_APP_KEY }}
         run: |
-          dotnet run --project src/ObservabilityValidator.Cli \
+          dotnet run --project src/Casablanca.Cli \
             -- --contracts=contracts/observability-contracts.yaml \
                --config=contracts/telemetry-config.yaml
 ```

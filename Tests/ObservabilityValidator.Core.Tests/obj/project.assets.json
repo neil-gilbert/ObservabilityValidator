@@ -419,17 +419,42 @@
           }
         }
       },
-      "ObservabilityValidator.Core/1.0.0": {
+      "ObservabilityValidator.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Abstractions.dll": {}
+        }
+      },
+      "ObservabilityValidator.Engine/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "ObservabilityValidator.Abstractions": "1.0.0",
           "YamlDotNet": "15.3.0"
         },
         "compile": {
-          "bin/placeholder/ObservabilityValidator.Core.dll": {}
+          "bin/placeholder/ObservabilityValidator.Engine.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ObservabilityValidator.Core.dll": {}
+          "bin/placeholder/ObservabilityValidator.Engine.dll": {}
+        }
+      },
+      "ObservabilityValidator.Testing/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ObservabilityValidator.Abstractions": "1.0.0",
+          "ObservabilityValidator.Engine": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Testing.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Testing.dll": {}
         }
       }
     }
@@ -909,16 +934,27 @@
         "yamldotnet.nuspec"
       ]
     },
-    "ObservabilityValidator.Core/1.0.0": {
+    "ObservabilityValidator.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../../src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
+      "msbuildProject": "../../src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
+    },
+    "ObservabilityValidator.Engine/1.0.0": {
       "type": "project",
       "path": "../../src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
       "msbuildProject": "../../src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
+    },
+    "ObservabilityValidator.Testing/1.0.0": {
+      "type": "project",
+      "path": "../../src/ObservabilityValidator.Testing/ObservabilityValidator.Testing.csproj",
+      "msbuildProject": "../../src/ObservabilityValidator.Testing/ObservabilityValidator.Testing.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.NET.Test.Sdk >= 17.11.1",
-      "ObservabilityValidator.Core >= 1.0.0",
+      "ObservabilityValidator.Engine >= 1.0.0",
+      "ObservabilityValidator.Testing >= 1.0.0",
       "xunit >= 2.9.0",
       "xunit.runner.visualstudio >= 2.8.2"
     ]
@@ -950,6 +986,9 @@
           "projectReferences": {
             "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj": {
               "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
+            },
+            "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Testing/ObservabilityValidator.Testing.csproj": {
+              "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Testing/ObservabilityValidator.Testing.csproj"
             }
           }
         }

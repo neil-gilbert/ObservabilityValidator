@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ObservabilityValidator.Core")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ObservabilityValidator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Validation engine and contract loader for ObservabilityValidator.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcfca7c578663bc4b5a73a085878bbdbdc11c985")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10b9adccfa6feb22266458d37bfb996202203489")]
 [assembly: System.Reflection.AssemblyProductAttribute("ObservabilityValidator.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ObservabilityValidator.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

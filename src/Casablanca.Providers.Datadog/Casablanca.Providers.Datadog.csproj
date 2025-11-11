@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>Casablanca.Providers.Datadog</PackageId>
+    <Authors>Casablanca</Authors>
+    <Description>Datadog provider for Casablanca (APM spans and metrics).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Casablanca.Abstractions\Casablanca.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

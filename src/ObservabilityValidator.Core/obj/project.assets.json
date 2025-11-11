@@ -14,6 +14,16 @@
             "related": ".xml"
           }
         }
+      },
+      "ObservabilityValidator.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Abstractions.dll": {}
+        }
       }
     }
   },
@@ -43,10 +53,16 @@
         "yamldotnet.15.3.0.nupkg.sha512",
         "yamldotnet.nuspec"
       ]
+    },
+    "ObservabilityValidator.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
+      "msbuildProject": "../ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "ObservabilityValidator.Abstractions >= 1.0.0",
       "YamlDotNet >= 15.3.0"
     ]
   },
@@ -57,7 +73,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
-      "projectName": "ObservabilityValidator.Core",
+      "projectName": "ObservabilityValidator.Engine",
       "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
       "packagesPath": "/Users/neilgilbert/.nuget/packages/",
       "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/obj/",
@@ -74,7 +90,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
+              "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>Casablanca.Engine</PackageId>
+    <Authors>Casablanca</Authors>
+    <Description>Validation engine and contract loader for Casablanca.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet" Version="15.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Casablanca.Abstractions\Casablanca.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

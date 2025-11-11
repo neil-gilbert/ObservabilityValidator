@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>Casablanca.Testing</PackageId>
+    <Authors>Casablanca</Authors>
+    <Description>Testing helpers for Casablanca: in-memory provider and assertions.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Casablanca.Abstractions\Casablanca.Abstractions.csproj" />
+    <ProjectReference Include="..\Casablanca.Engine\Casablanca.Engine.csproj" />
+  </ItemGroup>
+
+</Project>

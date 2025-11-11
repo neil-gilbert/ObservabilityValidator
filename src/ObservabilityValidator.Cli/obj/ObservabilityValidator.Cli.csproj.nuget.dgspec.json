@@ -4,6 +4,65 @@
     "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Cli/ObservabilityValidator.Cli.csproj": {}
   },
   "projects": {
+    "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
+        "projectName": "ObservabilityValidator.Abstractions",
+        "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
+        "packagesPath": "/Users/neilgilbert/.nuget/packages/",
+        "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/neilgilbert/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Cli/ObservabilityValidator.Cli.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,6 +90,9 @@
               },
               "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj": {
                 "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj"
+              },
+              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj": {
+                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj"
               }
             }
           }
@@ -74,7 +136,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
-        "projectName": "ObservabilityValidator.Core",
+        "projectName": "ObservabilityValidator.Engine",
         "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
         "packagesPath": "/Users/neilgilbert/.nuget/packages/",
         "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/obj/",
@@ -91,7 +153,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
+                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -157,8 +223,71 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj": {
-                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
+              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
+                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj",
+        "projectName": "ObservabilityValidator.Providers.Honeycomb",
+        "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj",
+        "packagesPath": "/Users/neilgilbert/.nuget/packages/",
+        "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/neilgilbert/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
+                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
               }
             }
           }

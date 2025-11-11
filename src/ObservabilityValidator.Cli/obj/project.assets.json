@@ -15,30 +15,54 @@
           }
         }
       },
-      "ObservabilityValidator.Core/1.0.0": {
+      "ObservabilityValidator.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Abstractions.dll": {}
+        }
+      },
+      "ObservabilityValidator.Engine/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "ObservabilityValidator.Abstractions": "1.0.0",
           "YamlDotNet": "15.3.0"
         },
         "compile": {
-          "bin/placeholder/ObservabilityValidator.Core.dll": {}
+          "bin/placeholder/ObservabilityValidator.Engine.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ObservabilityValidator.Core.dll": {}
+          "bin/placeholder/ObservabilityValidator.Engine.dll": {}
         }
       },
       "ObservabilityValidator.Providers.Datadog/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "ObservabilityValidator.Core": "1.0.0"
+          "ObservabilityValidator.Abstractions": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ObservabilityValidator.Providers.Datadog.dll": {}
         },
         "runtime": {
           "bin/placeholder/ObservabilityValidator.Providers.Datadog.dll": {}
+        }
+      },
+      "ObservabilityValidator.Providers.Honeycomb/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ObservabilityValidator.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ObservabilityValidator.Providers.Honeycomb.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObservabilityValidator.Providers.Honeycomb.dll": {}
         }
       }
     }
@@ -70,7 +94,12 @@
         "yamldotnet.nuspec"
       ]
     },
-    "ObservabilityValidator.Core/1.0.0": {
+    "ObservabilityValidator.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
+      "msbuildProject": "../ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
+    },
+    "ObservabilityValidator.Engine/1.0.0": {
       "type": "project",
       "path": "../ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
       "msbuildProject": "../ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
@@ -79,12 +108,18 @@
       "type": "project",
       "path": "../ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj",
       "msbuildProject": "../ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj"
+    },
+    "ObservabilityValidator.Providers.Honeycomb/1.0.0": {
+      "type": "project",
+      "path": "../ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj",
+      "msbuildProject": "../ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "ObservabilityValidator.Core >= 1.0.0",
-      "ObservabilityValidator.Providers.Datadog >= 1.0.0"
+      "ObservabilityValidator.Engine >= 1.0.0",
+      "ObservabilityValidator.Providers.Datadog >= 1.0.0",
+      "ObservabilityValidator.Providers.Honeycomb >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -117,6 +152,9 @@
             },
             "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj": {
               "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj"
+            },
+            "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj": {
+              "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Honeycomb/ObservabilityValidator.Providers.Honeycomb.csproj"
             }
           }
         }

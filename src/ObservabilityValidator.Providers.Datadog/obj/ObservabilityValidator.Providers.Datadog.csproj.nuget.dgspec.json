@@ -4,14 +4,14 @@
     "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Providers.Datadog/ObservabilityValidator.Providers.Datadog.csproj": {}
   },
   "projects": {
-    "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj": {
+    "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
-        "projectName": "ObservabilityValidator.Core",
-        "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj",
+        "projectUniqueName": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
+        "projectName": "ObservabilityValidator.Abstractions",
+        "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj",
         "packagesPath": "/Users/neilgilbert/.nuget/packages/",
-        "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/obj/",
+        "outputPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/neilgilbert/.nuget/NuGet/NuGet.Config"
@@ -43,12 +43,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "YamlDotNet": {
-              "target": "Package",
-              "version": "[15.3.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -91,8 +85,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj": {
-                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Core/ObservabilityValidator.Core.csproj"
+              "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj": {
+                "projectPath": "/Users/neilgilbert/Repo/ObservabilityValidator/src/ObservabilityValidator.Abstractions/ObservabilityValidator.Abstractions.csproj"
               }
             }
           }

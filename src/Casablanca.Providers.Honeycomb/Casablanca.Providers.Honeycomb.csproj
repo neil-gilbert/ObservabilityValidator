@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>Casablanca.Providers.Honeycomb</PackageId>
+    <Authors>Casablanca</Authors>
+    <Description>Honeycomb provider for Casablanca (EU-ready, traces only).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Casablanca.Abstractions\Casablanca.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
