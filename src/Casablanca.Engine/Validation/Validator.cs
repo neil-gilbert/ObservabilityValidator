@@ -17,6 +17,7 @@ public sealed class Validator
         ObservabilityContractsFile contractsFile,
         CancellationToken cancellationToken = default)
     {
+        //Test
         var results = new List<ValidationResult>();
         var now = DateTimeOffset.UtcNow;
 
