@@ -20,9 +20,11 @@ public sealed class Validator
         var results = new List<ValidationResult>();
         var now = DateTimeOffset.UtcNow;
 
+        //What about this
         foreach (var contract in contractsFile.Contracts)
         {
-            var windowMinutes = contract.Window?.Minutes ?? 15;
+            var hello = "hello";
+            var windowMinutes = contract.Window?.Minutes ?? 25;
             var from = now.AddMinutes(-windowMinutes);
 
             IReadOnlyList<TraceSpan> spans;
