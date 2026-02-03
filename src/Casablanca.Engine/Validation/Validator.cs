@@ -22,7 +22,7 @@ public sealed class Validator
 
         foreach (var contract in contractsFile.Contracts)
         {
-            var windowMinutes = contract.Window?.Minutes ?? 15;
+            var windowMinutes = contract.Window?.Minutes ?? 10;
             var from = now.AddMinutes(-windowMinutes);
 
             IReadOnlyList<TraceSpan> spans;
