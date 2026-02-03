@@ -15,7 +15,6 @@ public static class Program
     {
         if (args.Length == 0 || args[0].StartsWith("--"))
         {
-            // Back-compat: default to validate with legacy flags
             return await RunValidate(args);
         }
 
@@ -46,7 +45,7 @@ public static class Program
         var configPath = GetArg(args, "--config=") ?? "contracts/telemetry-config.yaml";
         var fromStr = GetArg(args, "--from=");
         var toStr = GetArg(args, "--to=");
-        var spansPath = GetArg(args, "--spans="); // optional offline NDJSON
+        var spansPath = GetArg(args, "--spans=");
 
         Console.WriteLine($"Using contracts: {contractsPath}");
         Console.WriteLine($"Using config   : {configPath}");
@@ -77,7 +76,7 @@ public static class Program
         {
             Console.WriteLine();
             Console.WriteLine($"=== Provider: {provider.Name} ===");
-            // Wrap provider to enforce from/to window
+            
             var windowingProvider = new WindowingProvider(provider, from, to);
             var validator = new Validator(windowingProvider);
             var results = await validator.ValidateAsync(contractsFile);
